@@ -13,7 +13,7 @@ pip install git+https://github.com/openai/CLIP.git
 pip install h5py umap-learn lap
 ```
 
-## Usage (`-help` output)
+## Usage
 ```
 usage: jtc.py [-h] [--folder FOLDER] [--models MODELS [MODELS ...]] [--thumb_size THUMB_SIZE] [--do_lap]
               [--max_data MAX_DATA]
