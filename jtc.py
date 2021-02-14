@@ -1,6 +1,7 @@
 # Determine cuda version suffix (e.g. "+cu110" for 11.0), or leave blank for CPU only
 # conda create -n "jtc" python=3.8
 # pip install torch==1.7.1{torch_version_suffix} torchvision==0.8.2{torch_version_suffix} -f https://download.pytorch.org/whl/torch_stable.html
+# (1.7.1 is now stable version, so should work without versions specified)
 # pip install git+https://github.com/openai/CLIP.git
 # pip install h5py umap-learn lap
 
