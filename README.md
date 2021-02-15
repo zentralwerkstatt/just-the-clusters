@@ -24,12 +24,12 @@ required arguments:
   --folder FOLDER, -f FOLDER
                         Folder with image files to plot
   --models MODELS [MODELS ...], -m MODELS [MODELS ...]
-                        Model(s) to extract embeddings, chose from: clip, vgg19, raw (list)
+                        Model(s) to extract embeddings, choose from: clip, vgg19, raw
 
 optional arguments:
   --thumb_size THUMB_SIZE
                         Max. size of thumbnail
   --do_lap              Arrange thumbnails in grid (via Jonker-Volgenant algorithm)
   --max_data MAX_DATA, -n MAX_DATA
-                        Only plot n random images
+                        Only plot n random images (good for testing)
 ```

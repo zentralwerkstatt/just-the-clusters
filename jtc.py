@@ -29,10 +29,10 @@ parser._action_groups.pop()
 required = parser.add_argument_group('required arguments')
 optional = parser.add_argument_group('optional arguments')
 required.add_argument("--folder", "-f", help="Folder with image files to plot")
-required.add_argument("--models", "-m", help="Model(s) to extract embeddings, chose from: clip, vgg19, raw (list)", nargs='+')
+required.add_argument("--models", "-m", help="Model(s) to extract embeddings, choose from: clip, vgg19, raw", nargs='+')
 optional.add_argument("--thumb_size", help="Max. size of thumbnail", type=int, default=64)
 optional.add_argument("--do_lap", help="Arrange thumbnails in grid (via Jonker-Volgenant algorithm)", action='store_true')
-optional.add_argument("--max_data", "-n", help="Only plot n random images", type=int, default=0)
+optional.add_argument("--max_data", "-n", help="Only plot n random images (good for testing)", type=int, default=0)
 args = parser.parse_args()
 
 folder = args.folder
