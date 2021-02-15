@@ -1,4 +1,4 @@
-# Just-the-clusters (JTC)
+# Just the Clusters (JTC)
 
 A quick and simple command line utility to create semantically-clustered image plots using pre-trained neural networks like VGG19 and CLIP.
 
