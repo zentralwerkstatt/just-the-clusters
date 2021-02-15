@@ -6,4 +6,5 @@ __pycache__/
 *.pt
 *.gz
 *.jpg
+!clip_small.jpg
 *.h5py

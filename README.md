@@ -2,6 +2,8 @@
 
 A quick and simple command line utility to create semantically-clustered image plots using pre-trained neural networks like VGG19 and CLIP.
 
+![](clip_small.jpg)
+
 ## Installation
 
 - Determine CUDA version suffix (e.g. "+cu110" for 11.0), or leave blank for CPU only
