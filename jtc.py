@@ -21,6 +21,10 @@ import umap
 import lap
 from scipy.spatial.distance import cdist
 
+# Do not stop for truncated images
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 device = set_cuda()
 log.info(f"Device: {device}")
 
@@ -69,11 +73,7 @@ for emb_type, embedder in embedders.items():
 
 log.info("Extracting features")
 for i, file_ in enumerate(tqdm.tqdm(valid_files)):
-    try:
-        img = load_img(file_)
-    except:
-        log.warning("Skipping one file, possibly truncated")
-        continue
+    img = load_img(file_)
     for emb_type, embedder in embedders.items():
         embs[emb_type][i] = embedder.transform(img)
 
