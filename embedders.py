@@ -37,11 +37,7 @@ class Embedder_CLIP():
     def __init__(self, device="cpu"):
         self.device = device
         self.feature_length = 512
-        self.model, _ = clip.load("ViT-B/32", device=self.device) # Not using preprocess
-        self.input_resolution = self.model.input_resolution.item()
-        self.transforms = tv.transforms.Compose([tv.transforms.Resize(self.input_resolution, interpolation=PIL.Image.BICUBIC), 
-                                                tv.transforms.CenterCrop(self.input_resolution),
-                                                tv.transforms.ToTensor()])
+        self.model, self.transforms = clip.load("ViT-B/32", device=self.device) # Not using preprocess
         self.image_mean = t.tensor([0.48145466, 0.4578275, 0.40821073]).to(self.device)
         self.image_std = t.tensor([0.26862954, 0.26130258, 0.27577711]).to(self.device)
 
