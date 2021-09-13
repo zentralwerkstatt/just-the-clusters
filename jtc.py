@@ -69,7 +69,11 @@ for emb_type, embedder in embedders.items():
 
 log.info("Extracting features")
 for i, file_ in enumerate(tqdm.tqdm(valid_files)):
-    img = load_img(file_)
+    try:
+        img = load_img(file_)
+    except:
+        log.warning("Skipping one file, possibly truncated")
+        continue
     for emb_type, embedder in embedders.items():
         embs[emb_type][i] = embedder.transform(img)
 
